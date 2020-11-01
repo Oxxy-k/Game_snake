@@ -1,0 +1,176 @@
+/*This is coded CSS rainbow*/
+body {
+  margin: 0;
+  font-family: "Pixel Times Bold", "Paskowy", "Thintel", "MKARCADECAPS",
+    "Comic Sans MS", sans-serif;
+}
+
+@font-face {
+  font-family: "Pixel Times Bold"; /* Гарнитура шрифта */
+  src: local(pompadur), url(./fonts/18965.ttf);
+}
+.App {
+  background: url("./img/background.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.snake-back-menu {
+  height: 15px;
+  padding-top: 50px;
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(58, 207, 252);
+}
+
+.grid {
+  margin: 40px auto;
+  border: black solid 5px;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.grid-snake-body-container {
+  background: url("./img/body-snake.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  transition: ease 150ms;
+}
+
+.grid-snake-head-container {
+  background: url("./img/body-head.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  transition: ease 150ms;
+}
+
+.score {
+  margin-top: 20px;
+  color: rgb(58, 207, 252);
+}
+
+.grid-container {
+  width: 25px;
+  height: 25px;
+}
+
+.snake-container {
+  background: url("./img/sky-snake.png") no-repeat center center;
+  text-align: center;
+  margin: 0 auto;
+  display: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.BlockMenu {
+  padding-top: 12%;
+}
+
+.MenuTitle {
+  text-transform: uppercase;
+  outline: none !important;
+  line-height: 0.7;
+  font-size: 4rem;
+  color: rgb(58, 207, 252);
+}
+
+.MenuTitle:hover,
+.snake-back-menu:hover {
+  text-decoration: underline;
+  -webkit-animation: MenuTitle 2s linear infinite;
+  animation: MenuTitle 2s linear infinite;
+}
+@-webkit-keyframes MenuTitle {
+  0% {
+    color: rgb(58, 207, 252);
+  }
+  51% {
+    color: rgb(255, 71, 237);
+  }
+  100% {
+    color: rgb(58, 207, 252);
+  }
+}
+@keyframes MenuTitle {
+  0% {
+    color: rgb(58, 207, 252);
+  }
+  51% {
+    color: rgb(255, 71, 237);
+  }
+  100% {
+    color: rgb(58, 207, 252);
+  }
+}
+
+.grid-good-food {
+  background: url("./img/good-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+
+.grid-bad-food {
+  background: url("./img/bad-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+
+.grid-death-food {
+  background: url("./img/death-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+
+.grid-portal-food {
+  background: url("./img/portal-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
