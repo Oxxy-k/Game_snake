@@ -1,6 +1,10 @@
 import React from "react";
 
-const Menu = ({ isNavigatedOnMenu, isNavigatedOnScoreMenu, onClose }) => {
+const onClose = () => {
+  window.close();
+};
+
+const Menu = ({ isNavigatedOnMenu, isNavigatedOnScoreMenu }) => {
   return (
     <div className="App">
       <div className="BlockMenu">
