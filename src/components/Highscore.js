@@ -2,17 +2,15 @@ import React from "react";
 
 const Highscore = ({ isNavigatedOnScoreMenu, score }) => {
   const scoreResult =
-    score.length === 0 ? (
-      <div></div>
-    ) : (
-      score.map(({ score, date }) => {
-        return (
-          <div className="snake-back-menu">
-            {`SCORE:` + score + `   DATE:` + date}
-          </div>
-        );
-      })
-    );
+    score.length === 0
+      ? null
+      : score.map(({ score, date }) => {
+          return (
+            <div className="snake-back-menu">
+              {`SCORE:` + score + `   DATE:` + date}
+            </div>
+          );
+        });
   return (
     <div className="App">
       <div className="highscore">
