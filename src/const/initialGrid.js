@@ -1,8 +1,7 @@
 const initialGrid = {
   rows: 20,
   cols: 20,
-  grid: [],
-  typeOfFood: null,
+  cell: [],
 };
 
 export default initialGrid;

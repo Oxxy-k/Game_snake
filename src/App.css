@@ -156,6 +156,27 @@ body {
   animation-duration: 1s;
 }
 
+.grid-high-speed-food {
+  background: url("./img/high-speed-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+.grid-low-speed-food {
+  background: url("./img/low-speed-food.png") no-repeat center center;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(3, 2, 1, 0);
+  animation-duration: 1s;
+}
+
 @keyframes blinker {
   from {
     opacity: 1;
