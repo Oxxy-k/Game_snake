@@ -1,5 +1,4 @@
 const initialSnake = {
-  score: [],
   body: [],
   rows: 10,
   cols: 10,

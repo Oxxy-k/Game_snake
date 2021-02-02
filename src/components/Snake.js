@@ -33,8 +33,7 @@ const Snake = ({ isNavigatedOnMenu, onNewScore }) => {
         snake,
         direction,
         initialGrid,
-        food,
-        onNewScore
+        food
       );
       if (newSnake) {
         setSnake(newSnake);
