@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import renderGridItems from "../helper/renderGridItems";
 import gameTick from "../helper/gameTick";
 import changeDirection from "../helper/changeDirection";
@@ -14,7 +15,7 @@ const initialGrid = {
   cell: getCell(),
 };
 
-const Snake = ({ isNavigatedOnMenu, onNewScore }) => {
+const Snake = ({ onNewScore }) => {
   const initialFood = createFood(initialSnake, initialGrid);
   const [snake, setSnake] = useState(initialSnake);
   const [food, setFood] = useState(initialFood);
@@ -59,9 +60,9 @@ const Snake = ({ isNavigatedOnMenu, onNewScore }) => {
   return (
     <div className="snake-container">
       <div>
-        <p className="snake-back-menu" onClick={() => isNavigatedOnMenu()}>
+        <Link to="/" className="snake-back-menu">
           {`<<`}Back to menu
-        </p>
+        </Link>
       </div>
       <div className="grid">{gridItems}</div>
       <div className="score">SCORE:{calculateScore(snake)}</div>

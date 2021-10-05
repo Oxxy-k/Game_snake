@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Highscore = ({ isNavigatedOnScoreMenu, score }) => {
+const Highscore = ({ score }) => {
   const scoreResult =
     score.length > 0 &&
     score.map(({ score, date }) => {
@@ -13,14 +14,9 @@ const Highscore = ({ isNavigatedOnScoreMenu, score }) => {
   return (
     <div className="App">
       <div className="highscore">
-        <div
-          className="snake-back-menu"
-          onClick={() => {
-            isNavigatedOnScoreMenu();
-          }}
-        >
+        <Link to="/" className="snake-back-menu">
           {`<<`}Back to menu
-        </div>
+        </Link>
         {scoreResult}
       </div>
     </div>

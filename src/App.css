@@ -17,6 +17,7 @@ body {
 }
 
 .snake-back-menu {
+  text-decoration: none;
   height: 15px;
   padding-top: 50px;
   margin: 0;
@@ -48,6 +49,10 @@ body {
   width: 25px;
   height: 25px;
   transition: ease 150ms;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .score {
