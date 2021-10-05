@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Highscore from "./components/Highscore";
 import Menu from "./components/Menu";
 import initialNavigateBar from "./const/initialNavigateBar";
 import Snake from "./components/Snake";
-
-
 
 const getSortHighscore = (arr) => {
   return arr
@@ -20,7 +18,13 @@ const App = () => {
   const onNewScore = (item) => {
     const newScore = getSortHighscore([...score, ...item]);
     setScore(newScore);
+    localStorage.setItem("highscore", JSON.stringify(newScore));
   };
+
+  useEffect(() => {
+    const highscore = JSON.parse(localStorage.getItem("highscore"));
+    setScore(highscore);
+  }, []);
 
   const isNavigatedOnMenu = () => {
     const newState = { ...NavigateBar, menu: !NavigateBar.menu };

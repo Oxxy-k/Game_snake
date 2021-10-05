@@ -29,50 +29,14 @@ const renderGridItems = (setGrid, snake, food) =>
           className="grid-snake-body-container"
         ></div>
       );
-    } else if (checkFoodOnGrid(food, cell))
-      if (food.typeOfFood === "good") {
-        return (
-          <div
-            className="grid-good-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      } else if (food.typeOfFood === "high-speed") {
-        return (
-          <div
-            className="grid-high-speed-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      } else if (food.typeOfFood === "low-speed") {
-        return (
-          <div
-            className="grid-low-speed-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      } else if (food.typeOfFood === "portal") {
-        return (
-          <div
-            className="grid-portal-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      } else if (food.typeOfFood === "bad") {
-        return (
-          <div
-            className="grid-bad-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      } else if (food.typeOfFood === "death") {
-        return (
-          <div
-            className="grid-death-food"
-            key={cell.row.toString() + "-" + cell.col.toString()}
-          ></div>
-        );
-      }
+    } else if (checkFoodOnGrid(food, cell)) {
+      return (
+        <div
+          className={`grid-${food.typeOfFood}-food`}
+          key={cell.row.toString() + "-" + cell.col.toString()}
+        ></div>
+      );
+    }
 
     return (
       <div
