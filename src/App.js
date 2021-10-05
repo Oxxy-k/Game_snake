@@ -14,16 +14,18 @@ const getSortHighscore = (arr) => {
 
 const App = () => {
   const [score, setScore] = useState([]);
+
+  useEffect(() => {
+    const highscore = JSON.parse(localStorage.getItem("highscore"));
+    if (!highscore) return;
+    setScore(highscore);
+  }, []);
+
   const onNewScore = (item) => {
     const newScore = getSortHighscore([...score, ...item]);
     setScore(newScore);
     localStorage.setItem("highscore", JSON.stringify(newScore));
   };
-
-  useEffect(() => {
-    const highscore = JSON.parse(localStorage.getItem("highscore"));
-    setScore(highscore);
-  }, []);
 
   return (
     <Router>

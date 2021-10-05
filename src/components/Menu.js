@@ -1,11 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const onClose = () => {
-  window.close();
-};
-
-const Menu = ({ isNavigatedOnMenu, isNavigatedOnScoreMenu }) => {
+const Menu = () => {
   return (
     <div className="App">
       <div className="BlockMenu">
@@ -18,7 +14,7 @@ const Menu = ({ isNavigatedOnMenu, isNavigatedOnScoreMenu }) => {
         <h1
           className="MenuTitle"
           onClick={() => {
-            onClose();
+            window.close();
           }}
         >
           exit
